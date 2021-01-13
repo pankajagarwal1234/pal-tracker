@@ -29,7 +29,7 @@ public class TimeEntryController {
         }
 
     }
-    @GetMapping
+    @GetMapping()
     public ResponseEntity<List<TimeEntry>> list() {
         List<TimeEntry> timeEntry = timeEntryRepository.list();
         return ResponseEntity.ok(timeEntry);
