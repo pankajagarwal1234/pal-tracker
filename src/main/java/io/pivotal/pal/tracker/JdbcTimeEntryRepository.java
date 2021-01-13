@@ -3,6 +3,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.sql.Date;
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.Objects;
 
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
-
+@Repository
 public class JdbcTimeEntryRepository implements TimeEntryRepository{
 
     private final JdbcTemplate jdbcTemplate;
